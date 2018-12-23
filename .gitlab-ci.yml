@@ -19,8 +19,6 @@ build:linux-x86_64:
         - ninja
         - ../scripts/upload_result.sh x86_64-linux icu_host
     stage: build
-    only:
-        - master
 
 build:windows-x86_64:
     image: viaduck/ci:mingw
@@ -31,8 +29,6 @@ build:windows-x86_64:
         - ninja
         - ../scripts/upload_result.sh x86_64-w64-mingw32 icu_cross
     stage: build
-    only:
-        - master
 
 build:android-arm64-v8a:
     image: viaduck/ci:android
@@ -44,8 +40,6 @@ build:android-arm64-v8a:
         - ninja
         - ../scripts/upload_result.sh arm64-v8a-android icu_cross
     stage: build
-    only:
-        - master
         
 build:android-armeabi-v7a:
     image: viaduck/ci:android
@@ -57,8 +51,6 @@ build:android-armeabi-v7a:
         - ninja
         - ../scripts/upload_result.sh armeabi-v7a-android icu_cross
     stage: build
-    only:
-        - master
         
 build:android-x86:
     image: viaduck/ci:android
@@ -70,8 +62,6 @@ build:android-x86:
         - ninja
         - ../scripts/upload_result.sh x86-android icu_cross
     stage: build
-    only:
-        - master
         
 build:android-x86_64:
     image: viaduck/ci:android
@@ -83,5 +73,3 @@ build:android-x86_64:
         - ninja
         - ../scripts/upload_result.sh x86_64-android icu_cross
     stage: build
-    only:
-        - master
