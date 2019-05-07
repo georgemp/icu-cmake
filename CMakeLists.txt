@@ -60,4 +60,6 @@ endif()
 
 # link system, cross or host libraries to interface target
 target_link_libraries(icu INTERFACE ${ICU_LIBRARIES})
-target_include_directories(icu INTERFACE ${ICU_INCLUDE_DIRS})
+target_include_directories(icu INTERFACE 
+    $<BUILD_INTERFACE:${ICU_INCLUDE_DIRS}>
+)
